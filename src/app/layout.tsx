@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import './globals.css'
 import { poppins } from './font'
+import Header from '@/components/Partials/Header'
 
 export const metadata: Metadata = {
     title: 'Next TicTacToe',
@@ -15,6 +16,7 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={poppins.className}>
+                <Header />
                 <main>{children}</main>
             </body>
         </html>
