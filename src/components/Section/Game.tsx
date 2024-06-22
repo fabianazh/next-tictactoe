@@ -9,7 +9,7 @@ import { Toolbar } from '@/components/Game/Toolbar'
 import Theme from '@/components/Other/Theme'
 import Indicator from '@/components/Game/Indicator'
 
-export default function Game() {
+export default function GameSection() {
     const [xIsNext, setXIsNext] = useState(true)
     const [history, setHistory] = useState([Array(9).fill(null)])
     const [currentMove, setCurrentMove] = useState(0)
@@ -49,16 +49,22 @@ export default function Game() {
                     />
                     <Toolbar>
                         <Toolbar.Button onClick={() => jumpTo(currentMove - 1)}>
-                            <GrUndo className="toolbar__icon" />
-                            <span className="toolbar__text">Undo</span>
+                            <GrUndo className="text-xl z-10 group-hover:drop-shadow-2xl rounded-full" />
+                            <span className="text-lg z-10 xl:text-base">
+                                Undo
+                            </span>
                         </Toolbar.Button>
                         <Toolbar.Button onClick={() => jumpTo(0)}>
-                            <VscDebugRestart className="toolbar__icon" />
-                            <span className="toolbar__text">Restart</span>
+                            <VscDebugRestart className="text-xl z-10 group-hover:drop-shadow-2xl rounded-full" />
+                            <span className="text-lg z-10 xl:text-base">
+                                Restart
+                            </span>
                         </Toolbar.Button>
                         <Toolbar.Button>
                             <Theme />
-                            <span className="toolbar__text">Theme</span>
+                            <span className="text-lg z-10 xl:text-base">
+                                Theme
+                            </span>
                         </Toolbar.Button>
                     </Toolbar>
                 </div>

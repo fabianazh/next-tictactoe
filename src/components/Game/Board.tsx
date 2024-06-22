@@ -18,7 +18,7 @@ export default function Board({
     }
 
     return (
-        <div className="board">
+        <div className="bg-white dark:bg-dark rounded-xl w-full h-80 xl:h-[22rem] shadow-md overflow-hidden grid grid-cols-3 grid-rows-3">
             <Square
                 value={squares[0]}
                 onSquareClick={() => handleClick(0)}

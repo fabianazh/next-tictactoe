@@ -14,7 +14,10 @@ export function Button({
     children: React.ReactNode
 }) {
     return (
-        <div onClick={onClick} className="toolbar__button group">
+        <div
+            onClick={onClick}
+            className="relative cursor-pointer gap-y-1 group grid place-items-center"
+        >
             {children}
         </div>
     )

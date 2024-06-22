@@ -22,7 +22,7 @@ export default function Square({
 
     return (
         <button
-            className={`${className} square grid__center`}
+            className={`${className} w-full h-full text-6xl xl:text-8xl border dark:border-2 cursor-pointer grid place-items-center`}
             onClick={onSquareClick}
         >
             {icon}
